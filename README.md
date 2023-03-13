@@ -1,21 +1,25 @@
-# Cobra Generator
+# Candy
 
-Candy is CLI tools provides you basic sets of commands do to do tedious task like YAML to JSON or JSON to YAML from your terminal.
+<div align="center">
 
-Install the Candy CLI with the command `go install github.com/Pradumnasaraf/candy@latest`. 
-Go will automatically install it in your `$GOPATH/bin` directory which should be in your $PATH. 
+![Candy CLI logo](https://user-images.githubusercontent.com/51878265/224826395-f62efa65-f64c-4c2e-aa93-ad6f72e0d5d7.png)
 
-Once installed you should have the `candy` CLI command available. Confirm by typing `candy` at a 
-command line. 
+</div>
 
+**Candy** is a CLI tool that provides a basic set of commands to perform tedious tasks such as converting **YAML to JSON** or **JSON to YAML** directly from your terminal. It's build with [Go](https://github.com/golang/go), [Cobra](https://github.com/spf13/cobra), [Viper](https://github.com/spf13/viper), etc
 
-### ⭐️ Features
+To install the Candy CLI, use the command `go install github.com/Pradumnasaraf/candy@latest`.
+Go will automatically install it in your `$GOPATH/bin` directory, which should be in your `$PATH`.
+
+Once installed, you can use the `candy` CLI command. To confirm installation, type `candy` at the command line.
+
+## ⭐️ Features
 
 - Convert JSON file to YAML
 - Convert YAML file to JSON
+- More comming soon...
 
-
-### 📝 Usage
+## 📝 Usage
 
 ```
 Usage:
@@ -28,10 +32,10 @@ Available Commands:
   help        Help about any command
 ```
 
-### 📜 License
+## 📜 License
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details
 
-### 🛡 Security
+## 🛡 Security
 
 If you discover a security vulnerability within this project, please check the [SECURITY](SECURITY.md) for more information.
