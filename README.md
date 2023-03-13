@@ -6,7 +6,7 @@
 
 </div>
 
-**Candy** is a CLI tool that provides a basic set of commands to perform tedious tasks such as converting **YAML to JSON** or **JSON to YAML** directly from your terminal. It's build with [Go](https://github.com/golang/go), [Cobra](https://github.com/spf13/cobra), [Viper](https://github.com/spf13/viper), etc
+**Candy** is a CLI tool that provides a basic set of commands to ease tedious tasks such as converting **YAML to JSON** or **JSON to YAML** directly from your terminal. It's build with [Go](https://github.com/golang/go), [Cobra](https://github.com/spf13/cobra), [Viper](https://github.com/spf13/viper), etc
 
 To install the Candy CLI, use the command `go install github.com/Pradumnasaraf/candy@latest`.
 Go will automatically install it in your `$GOPATH/bin` directory, which should be in your `$PATH`.
