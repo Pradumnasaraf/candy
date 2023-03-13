@@ -23,7 +23,6 @@ Once installed, you can use the `candy` CLI command. To confirm installation, ty
 
 ```
 Usage:
-  candy [flags]
   candy [command]
 
 Available Commands:
