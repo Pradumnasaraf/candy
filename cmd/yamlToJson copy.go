@@ -15,7 +15,7 @@ var (
 // yamlToJsonCmd represents the yamlToJson command
 var yamlToJsonCmd = &cobra.Command{
 	Use:   "YTJ",
-	Short: "Converts a YAML file to JSON",
+	Short: "Converts a YAML into JSON and output the result in output.json file",
 	Run: func(cmd *cobra.Command, args []string) {
 
 		// Read the YAML file
