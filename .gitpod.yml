@@ -1,0 +1,18 @@
+tasks:
+  - name: Go Server
+    init: 
+      go mod download
+    command: | 
+      go build .
+      ./candy
+
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: true
+    addCheck: true
+    addComment: false
+    addBadge: true
