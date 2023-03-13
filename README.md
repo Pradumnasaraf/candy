@@ -28,10 +28,12 @@ Usage:
   candy [command]
 
 Available Commands:
-  JTY         Converts a JSON file to YAML
-  YTJ         Converts a YAML file to JSON
+  JTY         Converts a JSON into YAML and output a output.yaml file
+  YTJ         Converts a YAML into JSON and output a output.json file.
   help        Help about any command
 ```
+
+Eg `candy JTY --file test.json` with convert JSON into YAML and create a `output.yaml` in you currect directory.
 
 ## 📜 License
 
