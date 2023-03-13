@@ -28,8 +28,8 @@ Usage:
   candy [command]
 
 Available Commands:
-  JTY         Converts a JSON into YAML and output a output.yaml file
-  YTJ         Converts a YAML into JSON and output a output.json file.
+  JTY         Converts a JSON into YAML and output the result in output.yaml file
+  YTJ         Converts a YAML into JSON and output the result in output.json file
   help        Help about any command
 ```
 
