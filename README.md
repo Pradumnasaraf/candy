@@ -15,10 +15,13 @@ Go will automatically install it in your `$GOPATH/bin` directory, which should b
 
 Once installed, you can use the `candy` CLI command. To confirm installation, type `candy` at the command line.
 
+> If you are getting an error like `command not found: candy`, then you need to add `$GOPATH/bin` to your `$PATH` environment variable. For that you can refer to [this](https://gist.github.com/Pradumnasaraf/ca6f9a0507089a4c44881446cdda4aa3) 
+
 ## ⭐️ Features
 
 - Convert JSON file to YAML
 - Convert YAML file to JSON
+- Generate Dockerfile for different languages/framework
 - More comming soon...
 
 ## 📝 Usage
@@ -28,12 +31,13 @@ Usage:
   candy [command]
 
 Available Commands:
-  JTY         Converts a JSON into YAML and output the result in output.yaml file
-  YTJ         Converts a YAML into JSON and output the result in output.json file
-  help        Help about any command
+  JTY         Converts a JSON into YAML.
+  YTJ         Converts a YAML into JSON.
+  docker      Docker related commands. Like generating a Dockerfile for a language.
 ```
 
 Eg `candy JTY --file test.json` with convert JSON into YAML and create a `output.yaml` in you currect directory.
+Eg `candy docker dockerfile --lang go` to genrate a `Dockerfile` template for go.
 
 ## 📜 License
 

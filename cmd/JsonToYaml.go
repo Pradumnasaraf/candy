@@ -1,7 +1,6 @@
 package cmd
 
 import (
-	"fmt"
 	"log"
 
 	"github.com/spf13/cobra"
@@ -9,13 +8,14 @@ import (
 )
 
 var (
-	inputJsonFile string
+	inputJsonFile  string
+	outputYamlFile string
 )
 
-// yamlToJsonCmd represents the yamlToJson command
-var JsonToYaml = &cobra.Command{
+// jsonToYaml is the command for converting JSON to YAML
+var jsonToYaml = &cobra.Command{
 	Use:   "JTY",
-	Short: "Converts a JSON into YAML and output the result in output.yaml file",
+	Short: "Converts a JSON into YAML.",
 	Run: func(cmd *cobra.Command, args []string) {
 
 		// Read the JSON file
@@ -27,19 +27,28 @@ var JsonToYaml = &cobra.Command{
 		}
 
 		// Write the YAML file
-		vp.SetConfigFile("output.yaml")
+		if outputYamlFile == "" {
+			outputYamlFile = "output.yaml"
+		}
+		vp.SetConfigFile(outputYamlFile)
+
 		err = vp.WriteConfig()
 		if err != nil {
 			log.Fatal(err)
 		}
-		fmt.Println("JSON file converted to YAML successfully. Check the output.yaml file.")
+
+		if outputYamlFile == "" {
+			log.Print("Operation completed successfully. Check the output.yaml file.")
+		} else {
+			log.Print("Operation completed successfully. Check the " + outputYamlFile + " file.")
+		}
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(JsonToYaml)
 
-	JsonToYaml.Flags().StringVarP(&inputJsonFile, "file", "f", "", "Input the JSON file name")
-	JsonToYaml.MarkFlagRequired("file")
-
+	// Flags for the JYT command
+	jsonToYaml.Flags().StringVarP(&outputYamlFile, "output", "o", "", "Output YAML file name (default is output.yaml)")
+	jsonToYaml.Flags().StringVarP(&inputJsonFile, "file", "f", "", "Input the JSON file name")
+	jsonToYaml.MarkFlagRequired("file")
 }
