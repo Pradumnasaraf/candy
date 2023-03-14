@@ -1,3 +1,12 @@
+# [1.1.0](https://github.com/Pradumnasaraf/candy/compare/v1.0.1...v1.1.0) (2023-03-14)
+
+
+### Features
+
+* Add a docker command set support ([#2](https://github.com/Pradumnasaraf/candy/issues/2)) ([ab43687](https://github.com/Pradumnasaraf/candy/commit/ab4368709d5ac30c0bea9783ff78e6fee3f16c37))
+
+
+
 ## [1.0.1](https://github.com/Pradumnasaraf/candy/compare/v1.0.0...v1.0.1) (2023-03-13)
 
 
