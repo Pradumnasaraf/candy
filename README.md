@@ -15,7 +15,7 @@ Go will automatically install it in your `$GOPATH/bin` directory, which should b
 
 Once installed, you can use the `candy` CLI command. To confirm installation, type `candy` at the command line.
 
-> If you are getting an error like `command not found: candy`, then you need to add `$GOPATH/bin` to your `$PATH` environment variable. For that you can refer to [this](https://gist.github.com/Pradumnasaraf/ca6f9a0507089a4c44881446cdda4aa3) 
+> **Note** If you are getting an error like `command not found: candy`, then you need to add `$GOPATH/bin` to your `$PATH` environment variable. For that you can refer to [this](https://gist.github.com/Pradumnasaraf/ca6f9a0507089a4c44881446cdda4aa3) 
 
 ## ⭐️ Features
 
@@ -37,6 +37,7 @@ Available Commands:
 ```
 
 Eg `candy JTY --file test.json` with convert JSON into YAML and create a `output.yaml` in you currect directory.
+
 Eg `candy docker dockerfile --lang go` to genrate a `Dockerfile` template for go.
 
 ## 📜 License
