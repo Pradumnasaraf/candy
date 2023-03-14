@@ -22,6 +22,7 @@ Once installed, you can use the `candy` CLI command. To confirm installation, ty
 - Convert JSON file to YAML
 - Convert YAML file to JSON
 - Generate Dockerfile for different languages/framework
+- More comming soon...
 
 ## 📝 Usage
 
