@@ -37,9 +37,9 @@ var yamlToJsonCmd = &cobra.Command{
 		}
 
 		if outputJsonFile == "" {
-			log.Print("Opearation completed successfully. Check the output.json file.")
+			log.Print("Operation completed successfully. Check the output.json file.")
 		} else {
-			log.Print("Opearation completed successfully. Check the " + outputJsonFile + " file.")
+			log.Print("Operation completed successfully. Check the " + outputJsonFile + " file.")
 		}
 	},
 }
