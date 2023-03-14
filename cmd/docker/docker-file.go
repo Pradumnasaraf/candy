@@ -12,7 +12,7 @@ var (
 	language string
 )
 
-// dockerfileCmd represents the dockerfile command
+// dockerfileCmd is the command for generating a Dockerfile for a language
 var dockerfileCmd = &cobra.Command{
 	Use:   "dockerfile",
 	Short: "Generates a Dockerfile for a language.",
@@ -48,7 +48,6 @@ func createDockerfile(lang string) {
 
 	fmt.Println("Dockerfile generated successfully.")
 }
-
 
 func init() {
 	DockerCmd.AddCommand(dockerfileCmd)

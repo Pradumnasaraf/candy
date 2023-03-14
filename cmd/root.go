@@ -7,6 +7,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
+// rootCmd is the root command for candy
 var rootCmd = &cobra.Command{
 	Use:   "candy",
 	Short: "Do all your tedious tasks with a single command",
@@ -24,5 +25,9 @@ func Execute() {
 }
 
 func init() {
+
+	// Subcommands for the root command
+	rootCmd.AddCommand(jsonToYaml)
+	rootCmd.AddCommand(yamlToJsonCmd)
 	rootCmd.AddCommand(docker.DockerCmd)
 }

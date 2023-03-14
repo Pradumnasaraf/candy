@@ -13,8 +13,8 @@ var (
 	outputYamlFile string
 )
 
-// yamlToJsonCmd represents the yamlToJson command
-var JsonToYaml = &cobra.Command{
+// jsonToYaml is the command for converting JSON to YAML
+var jsonToYaml = &cobra.Command{
 	Use:   "JTY",
 	Short: "Converts a JSON into YAML.",
 	Run: func(cmd *cobra.Command, args []string) {
@@ -47,9 +47,9 @@ var JsonToYaml = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(JsonToYaml)
 
-	JsonToYaml.Flags().StringVarP(&outputYamlFile, "output", "o", "", "Output YAML file name (default is output.yaml)")
-	JsonToYaml.Flags().StringVarP(&inputJsonFile, "file", "f", "", "Input the JSON file name")
-	JsonToYaml.MarkFlagRequired("file")
+	// Flags for the JYT command
+	jsonToYaml.Flags().StringVarP(&outputYamlFile, "output", "o", "", "Output YAML file name (default is output.yaml)")
+	jsonToYaml.Flags().StringVarP(&inputJsonFile, "file", "f", "", "Input the JSON file name")
+	jsonToYaml.MarkFlagRequired("file")
 }

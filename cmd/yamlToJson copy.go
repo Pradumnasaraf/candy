@@ -13,7 +13,7 @@ var (
 	outputJsonFile string
 )
 
-// yamlToJsonCmd represents the yamlToJson command
+// yamlToJsonCmd is the command for converting YAML to JSON
 var yamlToJsonCmd = &cobra.Command{
 	Use:   "YTJ",
 	Short: "Converts a YAML into JSON.",
@@ -46,8 +46,8 @@ var yamlToJsonCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(yamlToJsonCmd)
 
+	// Flags for the YTJ command
 	yamlToJsonCmd.Flags().StringVarP(&outputJsonFile, "output", "o", "", "Output JSON file name (default is output.json)")
 	yamlToJsonCmd.Flags().StringVarP(&inputYamlFile, "file", "f", "", "Input the YAML file name")
 	yamlToJsonCmd.MarkFlagRequired("file")
