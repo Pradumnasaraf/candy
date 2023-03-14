@@ -1,7 +1,6 @@
 package docker
 
 import (
-	"fmt"
 	"log"
 	"os"
 
@@ -29,7 +28,7 @@ var dockerfileCmd = &cobra.Command{
 		case language == "ruby":
 			createDockerfile(Ruby)
 		default:
-			fmt.Println("Sorry, we don't have a Dockerfile for that language yet.")
+			log.Print("Sorry, we don't have a Dockerfile for that language yet.")
 		}
 	},
 }
@@ -46,7 +45,7 @@ func createDockerfile(lang string) {
 		log.Fatal(err)
 	}
 
-	fmt.Println("Dockerfile generated successfully.")
+	log.Print("Dockerfile created successfully.")
 }
 
 func init() {

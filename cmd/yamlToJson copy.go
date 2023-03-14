@@ -1,7 +1,6 @@
 package cmd
 
 import (
-	"fmt"
 	"log"
 
 	"github.com/spf13/cobra"
@@ -38,9 +37,9 @@ var yamlToJsonCmd = &cobra.Command{
 		}
 
 		if outputJsonFile == "" {
-			fmt.Println("Opearation completed successfully. Check the output.json file.")
+			log.Print("Opearation completed successfully. Check the output.json file.")
 		} else {
-			fmt.Println("Opearation completed successfully. Check the " + outputJsonFile + " file.")
+			log.Print("Opearation completed successfully. Check the " + outputJsonFile + " file.")
 		}
 	},
 }

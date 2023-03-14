@@ -1,5 +1,7 @@
 package docker
 
+// This go file contains the Dockerfile templates for different languages
+
 var Golang string = 
 `# base image. Change it to latest version of golang
 FROM golang:1.14.2-alpine3.11
