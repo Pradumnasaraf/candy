@@ -9,13 +9,14 @@ import (
 )
 
 var (
-	inputYamlFile string
+	inputYamlFile  string
+	outputJsonFile string
 )
 
 // yamlToJsonCmd represents the yamlToJson command
 var yamlToJsonCmd = &cobra.Command{
 	Use:   "YTJ",
-	Short: "Converts a YAML into JSON and output the result in output.json file",
+	Short: "Converts a YAML into JSON.",
 	Run: func(cmd *cobra.Command, args []string) {
 
 		// Read the YAML file
@@ -27,18 +28,27 @@ var yamlToJsonCmd = &cobra.Command{
 		}
 
 		// Write the JSON file
-		vp.SetConfigFile("output.json")
+		if outputJsonFile == "" {
+			outputJsonFile = "output.json"
+		}
+		vp.SetConfigFile(outputJsonFile)
 		err = vp.WriteConfig()
 		if err != nil {
 			log.Fatal(err)
 		}
-		fmt.Println("YAML file converted to JSON successfully. Check the output.json file.")
+
+		if outputJsonFile == "" {
+			fmt.Println("Opearation completed successfully. Check the output.json file.")
+		} else {
+			fmt.Println("Opearation completed successfully. Check the " + outputJsonFile + " file.")
+		}
 	},
 }
 
 func init() {
 	rootCmd.AddCommand(yamlToJsonCmd)
 
+	yamlToJsonCmd.Flags().StringVarP(&outputJsonFile, "output", "o", "", "Output JSON file name (default is output.json)")
 	yamlToJsonCmd.Flags().StringVarP(&inputYamlFile, "file", "f", "", "Input the YAML file name")
 	yamlToJsonCmd.MarkFlagRequired("file")
 }
