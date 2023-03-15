@@ -42,6 +42,8 @@ Eg `candy JTY --file test.json` with convert JSON into YAML and create a `output
 
 Eg `candy docker dockerfile --lang go` to genrate a `Dockerfile` template for go.
 
+eg `candy k8s manifest --obj deployment` to generate a `deployment.yaml` file with deployment template.
+
 ## 📜 License
 
 This project is licensed under the Apache-2.0 license - see the [LICENSE](LICENSE) file for details
