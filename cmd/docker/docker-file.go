@@ -3,6 +3,7 @@ package docker
 import (
 	"log"
 	"os"
+	"strings"
 
 	"github.com/spf13/cobra"
 )
@@ -16,19 +17,21 @@ var dockerfileCmd = &cobra.Command{
 	Use:   "dockerfile",
 	Short: "Generates a Dockerfile for a language.",
 	Run: func(cmd *cobra.Command, args []string) {
+
+		language = strings.ToLower(language)
 		switch {
 		case language == "go" || language == "golang":
-			createDockerfile(Golang)
+			createDockerfile(golang)
 		case language == "python" || language == "py":
-			createDockerfile(Python)
+			createDockerfile(python)
 		case language == "node" || language == "nodejs":
-			createDockerfile(Node)
+			createDockerfile(node)
 		case language == "java":
-			createDockerfile(Java)
+			createDockerfile(java)
 		case language == "ruby":
-			createDockerfile(Ruby)
+			createDockerfile(ruby)
 		default:
-			log.Print("Sorry, we don't have a Dockerfile for that language yet.")
+			log.Print("Currently we don't support Dockerfile generation for " + language + ".")
 		}
 	},
 }
