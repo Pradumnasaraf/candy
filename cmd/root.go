@@ -4,6 +4,7 @@ import (
 	"os"
 
 	"github.com/Pradumnasaraf/candy/cmd/docker"
+	"github.com/Pradumnasaraf/candy/cmd/kubernetes"
 	"github.com/spf13/cobra"
 )
 
@@ -30,4 +31,5 @@ func init() {
 	rootCmd.AddCommand(jsonToYaml)
 	rootCmd.AddCommand(yamlToJsonCmd)
 	rootCmd.AddCommand(docker.DockerCmd)
+	rootCmd.AddCommand(kubernetes.KubernetesCmd)
 }

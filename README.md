@@ -22,6 +22,7 @@ Once installed, you can use the `candy` CLI command. To confirm installation, ty
 - Convert JSON file to YAML
 - Convert YAML file to JSON
 - Generate Dockerfile for different languages/framework
+- Generate Kubernetes manifests for different objects
 - More comming soon...
 
 ## 📝 Usage
@@ -34,11 +35,14 @@ Available Commands:
   JTY         Converts a JSON into YAML.
   YTJ         Converts a YAML into JSON.
   docker      Docker related commands. Like generating a Dockerfile for a language.
+  k8s         Kubernetes related commands. Like generating manifest files for kubernetes objects.
 ```
 
 Eg `candy JTY --file test.json` with convert JSON into YAML and create a `output.yaml` in you currect directory.
 
 Eg `candy docker dockerfile --lang go` to genrate a `Dockerfile` template for go.
+
+eg `candy k8s manifest --obj deployment` to generate a `deployment.yaml` file with deployment template.
 
 ## 📜 License
 
