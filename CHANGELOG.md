@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/Pradumnasaraf/candy/compare/v1.1.0...v1.2.0) (2023-03-15)
+
+
+### Features
+
+* Add a Kubernetes command set support ([#3](https://github.com/Pradumnasaraf/candy/issues/3)) ([2a0f754](https://github.com/Pradumnasaraf/candy/commit/2a0f7546124491dfbe941b2efdcd24f2320e69a1))
+
+
+
 # [1.1.0](https://github.com/Pradumnasaraf/candy/compare/v1.0.1...v1.1.0) (2023-03-14)
 
 
