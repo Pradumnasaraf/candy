@@ -22,7 +22,7 @@ Once installed, you can use the `candy` CLI command. To confirm installation, ty
 - Convert JSON file to YAML
 - Convert YAML file to JSON
 - Generate Dockerfile for different languages/framework
-- Generate Kubernetes manifests for different objects.
+- Generate Kubernetes manifests for different objects
 - More comming soon...
 
 ## 📝 Usage
