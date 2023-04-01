@@ -1,3 +1,12 @@
+## [1.2.1](https://github.com/Pradumnasaraf/candy/compare/v1.2.0...v1.2.1) (2023-04-01)
+
+
+### Bug Fixes
+
+* file naming in cmd ([2d8a0ed](https://github.com/Pradumnasaraf/candy/commit/2d8a0edc5f37ba0e5412891ab2b842b1aa70c4af))
+
+
+
 # [1.2.0](https://github.com/Pradumnasaraf/candy/compare/v1.1.0...v1.2.0) (2023-03-15)
 
 
