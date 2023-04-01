@@ -30,6 +30,7 @@ func init() {
 	// Subcommands for the root command
 	rootCmd.AddCommand(jsonToYaml)
 	rootCmd.AddCommand(yamlToJsonCmd)
+	rootCmd.AddCommand(textToJsonCmd)
 	rootCmd.AddCommand(docker.DockerCmd)
 	rootCmd.AddCommand(kubernetes.KubernetesCmd)
 }
