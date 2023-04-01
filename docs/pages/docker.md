@@ -14,7 +14,7 @@ candy docker [command]
 
 > Flags for `dockerfile` subcommand
 
-- `--lang` - Language/Framework for which you want to generate a Dockerfile. **This flag is required**.
+- `--lang` or `-l` - Language/Framework for which you want to generate a Dockerfile. **This flag is required**.
 
 Eg:
 ```bash
@@ -29,3 +29,9 @@ canndy docker dockerfile --lang node
 - Python
 - Ruby
 - Rust
+
+you can use help flag to get more information about the command.
+
+```bash
+cabdy docker --help
+```
