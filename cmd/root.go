@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"log"
 	"os"
 
 	"github.com/Pradumnasaraf/candy/cmd/docker"
@@ -33,4 +34,10 @@ func init() {
 	rootCmd.AddCommand(textToJsonCmd)
 	rootCmd.AddCommand(docker.DockerCmd)
 	rootCmd.AddCommand(kubernetes.KubernetesCmd)
+}
+
+func checkNilErr(err error) {
+	if err != nil {
+		log.Fatal(err)
+	}
 }

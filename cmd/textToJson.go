@@ -22,13 +22,11 @@ var textToJsonCmd = &cobra.Command{
 
 		// Read the input file
 		content, err := os.ReadFile(inputTextFile)
-		if err != nil {
-			log.Fatal("Error reading input file: ", err)
-		}
+		checkNilErr(err)
 
 		// Check if the input file is empty
 		if len(content) == 0 {
-			log.Fatal("Input file is empty")
+			checkNilErr(err)
 		}
 
 		// Convert the input file to JSON
@@ -52,15 +50,12 @@ var textToJsonCmd = &cobra.Command{
 
 		// Write the output file
 		file, err := os.Create(outputJsonFile1)
-		if err != nil {
-			log.Fatal("Error creating output file: ", err)
-		}
+		checkNilErr(err)
+		
 		defer file.Close()
 
 		_, err = file.WriteString(string(jsonString))
-		if err != nil {
-			log.Fatal("Error writing to output file: ", err)
-		}
+		checkNilErr(err)
 	},
 }
 

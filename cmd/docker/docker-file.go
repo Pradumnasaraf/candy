@@ -38,15 +38,11 @@ var dockerfileCmd = &cobra.Command{
 
 func createDockerfile(lang string) {
 	file, err := os.Create("Dockerfile")
-	if err != nil {
-		log.Fatal(err)
-	}
+	checkNilErr(err)
 	defer file.Close()
 
 	_, err = file.WriteString(lang)
-	if err != nil {
-		log.Fatal(err)
-	}
+	checkNilErr(err)
 
 	log.Print("Dockerfile created successfully.")
 }
@@ -56,4 +52,10 @@ func init() {
 
 	dockerfileCmd.Flags().StringVarP(&language, "lang", "l", "", "Programming language to generate Dockerfile for.")
 	dockerfileCmd.MarkFlagRequired("lang")
+}
+
+func checkNilErr(err error) {
+	if err != nil {
+		log.Fatal(err)
+	}
 }
