@@ -17,6 +17,10 @@ Once installed, you can use the `candy` CLI command. To confirm installation, ty
 
 > **Note** If you are getting an error like `command not found: candy`, then you need to add `$GOPATH/bin` to your `$PATH` environment variable. For that you can refer to [this](https://gist.github.com/Pradumnasaraf/ca6f9a0507089a4c44881446cdda4aa3) 
 
+## 📚 Documentation
+
+Check out detailed documentation for getting strarted and using Candy CLI [here](https://pradumnasaraf.github.io/candy/)
+
 ## ⭐️ Features
 
 - Convert JSON file to YAML
@@ -34,10 +38,12 @@ Usage:
 Available Commands:
   JTY         Converts a JSON into YAML.
   YTJ         Converts a YAML into JSON.
-  KVTJ         Convert Key-Value (text) to JSON.
+  KVTY        Convert Key-Value (text) to YAML.
   docker      Docker related commands. Like generating a Dockerfile for a language.
   k8s         Kubernetes related commands. Like generating manifest files for kubernetes objects.
 ```
+
+For detailed usage of each command, visit [here](https://pradumnasaraf.github.io/candy/)
 
 Eg `candy JTY --file test.json` with convert JSON into YAML and create a `output.yaml` in you currect directory.
 
