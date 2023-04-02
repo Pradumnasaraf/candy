@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/Pradumnasaraf/candy/compare/v1.2.1...v1.3.0) (2023-04-02)
+
+
+### Features
+
+* Add support for cmd to convert key-value to JSON ([#6](https://github.com/Pradumnasaraf/candy/issues/6)) ([b4760fc](https://github.com/Pradumnasaraf/candy/commit/b4760fc748048eef83467f8b942bfaf90a01ae41))
+
+
+
 ## [1.2.1](https://github.com/Pradumnasaraf/candy/compare/v1.2.0...v1.2.1) (2023-04-01)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * docs and command description  ([#1](https://github.com/Pradumnasaraf/candy/issues/1)) ([57cdcd1](https://github.com/Pradumnasaraf/candy/commit/57cdcd1056052a30da5bd8f410c2fd20bf628f08))
-
-
-
-# [1.0.0](https://github.com/Pradumnasaraf/candy/compare/272ee9203ed13d78aaf9c6b4cd6b0d1700e52f11...v1.0.0) (2023-03-13)
-
-
-### Features
-
-* Add initial files ([272ee92](https://github.com/Pradumnasaraf/candy/commit/272ee9203ed13d78aaf9c6b4cd6b0d1700e52f11))
 
 
 
