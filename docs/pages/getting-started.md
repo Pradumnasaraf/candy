@@ -2,7 +2,7 @@
 
 ### Prerequisites
 
-- [Go](https://golang.org/dl/) (>= 1.19)
+- [Go](https://golang.org/dl/) (>= 1.16)
 
 ### Installation
 
@@ -13,3 +13,11 @@ Go will automatically install it in your `$GOPATH/bin` directory, which should b
 Once installed, you can use the `candy` CLI command. To confirm installation, type `candy` at the command line.
 
 > **Note** If you are getting an error like `command not found: candy`, then you need to add `$GOPATH/bin` to your `$PATH` environment variable. For that you can refer to [this](https://gist.github.com/Pradumnasaraf/ca6f9a0507089a4c44881446cdda4aa3)
+
+### Updating Candy
+
+To update Candy, use the command `go install github.com/Pradumnasaraf/candy@latest`. It will automatically update Candy to the latest version.
+
+### Using Candy
+
+Check out detailed documentation for each command [here](../).

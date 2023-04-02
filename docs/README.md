@@ -7,7 +7,7 @@
 
 ## Getting Started
 
-Check out the [`Getting Started`](./pages/getting-started.md) page to get started with Candy.
+For installation, updating, and usage instructions, see the [Getting Started](./pages/getting-started.md) page.
 
 ## Documentation
 
