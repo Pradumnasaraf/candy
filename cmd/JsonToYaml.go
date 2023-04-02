@@ -22,9 +22,7 @@ var jsonToYaml = &cobra.Command{
 		vp := viper.New()
 		vp.SetConfigFile(inputJsonFile)
 		err := vp.ReadInConfig()
-		if err != nil {
-			log.Fatal(err)
-		}
+		checkNilErr(err)
 
 		// Write the YAML file
 		if outputYamlFile == "" {
@@ -33,9 +31,7 @@ var jsonToYaml = &cobra.Command{
 		vp.SetConfigFile(outputYamlFile)
 
 		err = vp.WriteConfig()
-		if err != nil {
-			log.Fatal(err)
-		}
+		checkNilErr(err)
 
 		if outputYamlFile == "" {
 			log.Print("Operation completed successfully. Check the output.yaml file.")

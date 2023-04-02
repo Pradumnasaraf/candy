@@ -43,15 +43,12 @@ var kubernetesManifestCmd = &cobra.Command{
 
 func createManifestFile(filename string, obj string) {
 	file, err := os.Create(filename)
-	if err != nil {
-		log.Fatal(err)
-	}
+	checkNilErr(err)
+	
 	defer file.Close()
 
 	_, err = file.WriteString(obj)
-	if err != nil {
-		log.Fatal(err)
-	}
+	checkNilErr(err)
 
 	log.Print(filename + " created successfully.")
 }
@@ -61,4 +58,10 @@ func init() {
 
 	kubernetesManifestCmd.Flags().StringVarP(&k8Obj, "obj", "o", "", "Kubernetes object to generate manifest for.")
 	kubernetesManifestCmd.MarkFlagRequired("obj")
+}
+
+func checkNilErr(err error) {
+	if err != nil {
+		log.Fatal(err)
+	}
 }

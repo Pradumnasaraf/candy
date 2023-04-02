@@ -34,6 +34,7 @@ Usage:
 Available Commands:
   JTY         Converts a JSON into YAML.
   YTJ         Converts a YAML into JSON.
+  KVTJ         Convert Key-Value (text) to JSON.
   docker      Docker related commands. Like generating a Dockerfile for a language.
   k8s         Kubernetes related commands. Like generating manifest files for kubernetes objects.
 ```

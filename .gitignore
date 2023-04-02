@@ -38,3 +38,11 @@ bin
 .idea/
 .vscode/
 *.iml
+
+# Build files
+
+candy
+
+# Env files
+
+.env
