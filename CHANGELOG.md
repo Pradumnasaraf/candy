@@ -1,3 +1,12 @@
+## [1.3.1](https://github.com/Pradumnasaraf/candy/compare/v1.3.0...v1.3.1) (2023-04-04)
+
+
+### Bug Fixes
+
+* file name ([#7](https://github.com/Pradumnasaraf/candy/issues/7)) ([00362c8](https://github.com/Pradumnasaraf/candy/commit/00362c8266e96e6d11e627cc21ceede93484a0ef))
+
+
+
 # [1.3.0](https://github.com/Pradumnasaraf/candy/compare/v1.2.1...v1.3.0) (2023-04-02)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * Add a docker command set support ([#2](https://github.com/Pradumnasaraf/candy/issues/2)) ([ab43687](https://github.com/Pradumnasaraf/candy/commit/ab4368709d5ac30c0bea9783ff78e6fee3f16c37))
-
-
-
-## [1.0.1](https://github.com/Pradumnasaraf/candy/compare/v1.0.0...v1.0.1) (2023-03-13)
-
-
-### Bug Fixes
-
-* docs and command description  ([#1](https://github.com/Pradumnasaraf/candy/issues/1)) ([57cdcd1](https://github.com/Pradumnasaraf/candy/commit/57cdcd1056052a30da5bd8f410c2fd20bf628f08))
 
 
 
