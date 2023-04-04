@@ -19,12 +19,13 @@ Once installed, you can use the `candy` CLI command. To confirm installation, ty
 
 ## 📚 Documentation
 
-Check out detailed documentation for getting strarted and using Candy CLI [here](https://pradumnasaraf.github.io/candy/)
+**Check out detailed documentation for getting strarted and using Candy CLI** [**here**](https://pradumnasaraf.github.io/candy/)
 
 ## ⭐️ Features
 
 - Convert JSON file to YAML
 - Convert YAML file to JSON
+- Convert Key-Value to JSON
 - Generate Dockerfile for different languages/framework
 - Generate Kubernetes manifests for different objects
 - More coming soon...
