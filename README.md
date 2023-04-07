@@ -8,18 +8,18 @@
 
 </div>
 
-**Candy** is a CLI tool that provides a basic set of commands to perform tedious tasks such as converting **YAML to JSON** or **JSON to YAML** directly from your terminal. It's build with [Go](https://github.com/golang/go), [Cobra](https://github.com/spf13/cobra), [Viper](https://github.com/spf13/viper), etc
+**Candy** is a CLI tool that provides a basic set of commands to perform tedious tasks such as converting **YAML to JSON** or **JSON to YAML** directly from your terminal. It's built with [Go](https://github.com/golang/go), [Cobra](https://github.com/spf13/cobra), [Viper](https://github.com/spf13/viper), etc.
 
 To install the Candy CLI, use the command `go install github.com/Pradumnasaraf/candy@latest`.
 Go will automatically install it in your `$GOPATH/bin` directory, which should be in your `$PATH`.
 
 Once installed, you can use the `candy` CLI command. To confirm installation, type `candy` at the command line.
 
-> **Note** If you are getting an error like `command not found: candy`, then you need to add `$GOPATH/bin` to your `$PATH` environment variable. For that you can refer to [this](https://gist.github.com/Pradumnasaraf/ca6f9a0507089a4c44881446cdda4aa3) 
+> **Note** If you are getting an error like `command not found: candy`, then you need to add `$GOPATH/bin` to your `$PATH` environment variable. For that you can refer to [this](https://gist.github.com/Pradumnasaraf/ca6f9a0507089a4c44881446cdda4aa3). 
 
 ## 📚 Documentation
 
-**Check out detailed documentation for getting strarted and using Candy CLI** [**here**](https://pradumnasaraf.github.io/candy/)
+**Check out detailed documentation for getting started and using Candy CLI** [**here**](https://pradumnasaraf.github.io/candy/).
 
 ## ⭐️ Features
 
@@ -46,15 +46,15 @@ Available Commands:
 
 For detailed usage of each command, visit [here](https://pradumnasaraf.github.io/candy/)
 
-Eg `candy JTY --file test.json` with convert JSON into YAML and create a `output.yaml` in you currect directory.
+Eg `candy JTY --file test.json` with convert JSON into YAML and create a `output.yaml` in your current directory.
 
-Eg `candy docker dockerfile --lang go` to genrate a `Dockerfile` template for go.
+Eg `candy docker dockerfile --lang go` to generate a `Dockerfile` template for go.
 
 eg `candy k8s manifest --obj deployment` to generate a `deployment.yaml` file with deployment template.
 
 ## 📜 License
 
-This project is licensed under the Apache-2.0 license - see the [LICENSE](LICENSE) file for details
+This project is licensed under the Apache-2.0 license - see the [LICENSE](LICENSE) file for details.
 
 ## 🛡 Security
 
