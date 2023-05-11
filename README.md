@@ -28,19 +28,22 @@ Once installed, you can use the `candy` CLI command. To confirm installation, ty
 - Convert Key-Value to JSON
 - Generate Dockerfile for different languages/framework
 - Generate Kubernetes manifests for different objects
+- Encode and Decode a string to base64
 - More coming soon...
 
 ## 📝 Usage
 
 ```
 Usage:
+  candy [command] [flags]
   candy [command]
 
 Available Commands:
   JTY         Converts a JSON into YAML.
+  KVTJ        Converts Key-Value (text) to JSON.
   YTJ         Converts a YAML into JSON.
-  KVTY        Convert Key-Value (text) to YAML.
   docker      Docker related commands. Like generating a Dockerfile for a language.
+  encode      It encodes and decodes a string to base64 and vice versa.
   k8s         Kubernetes related commands. Like generating manifest files for kubernetes objects.
 ```
 
