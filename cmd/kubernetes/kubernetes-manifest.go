@@ -14,7 +14,7 @@ var (
 
 // kubernetesManifestCmd is the command for generating a manifest file for a kubernetes object
 var kubernetesManifestCmd = &cobra.Command{
-	Use:   "manifest",
+	Use:   "manifest [flags]",
 	Short: "Generates manifest file for different objects.",
 	Run: func(cmd *cobra.Command, args []string) {
 
@@ -44,7 +44,7 @@ var kubernetesManifestCmd = &cobra.Command{
 func createManifestFile(filename string, obj string) {
 	file, err := os.Create(filename)
 	checkNilErr(err)
-	
+
 	defer file.Close()
 
 	_, err = file.WriteString(obj)

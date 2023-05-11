@@ -14,7 +14,7 @@ var (
 
 // yamlToJsonCmd is the command for converting YAML to JSON
 var yamlToJsonCmd = &cobra.Command{
-	Use:   "YTJ",
+	Use:   "YTJ [flags]",
 	Short: "Converts a YAML into JSON.",
 	Run: func(cmd *cobra.Command, args []string) {
 

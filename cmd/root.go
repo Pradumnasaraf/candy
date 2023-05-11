@@ -11,7 +11,7 @@ import (
 
 // rootCmd is the root command for candy
 var rootCmd = &cobra.Command{
-	Use:   "candy",
+	Use:   "candy [command]",
 	Short: "Do all your tedious tasks with a single command",
 	Run: func(cmd *cobra.Command, args []string) {
 		cmd.Help()
@@ -29,11 +29,13 @@ func Execute() {
 func init() {
 
 	// Subcommands for the root command
+	rootCmd.AddCommand(encodeCmd)
 	rootCmd.AddCommand(jsonToYaml)
 	rootCmd.AddCommand(yamlToJsonCmd)
 	rootCmd.AddCommand(keyValueToJson)
 	rootCmd.AddCommand(docker.DockerCmd)
 	rootCmd.AddCommand(kubernetes.KubernetesCmd)
+
 }
 
 func checkNilErr(err error) {
