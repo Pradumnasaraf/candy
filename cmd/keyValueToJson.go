@@ -16,7 +16,7 @@ var (
 
 // textToJsonCmd represents the aa command
 var keyValueToJson = &cobra.Command{
-	Use:   "KVTJ",
+	Use:   "KVTJ [flags]",
 	Short: "Converts Key-Value (text) to JSON.",
 	Run: func(cmd *cobra.Command, args []string) {
 
