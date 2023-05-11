@@ -46,3 +46,4 @@ candy
 # Env files
 
 .env
+dist/
