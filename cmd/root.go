@@ -35,6 +35,7 @@ func init() {
 	rootCmd.AddCommand(keyValueToJson)
 	rootCmd.AddCommand(docker.DockerCmd)
 	rootCmd.AddCommand(kubernetes.KubernetesCmd)
+	rootCmd.AddCommand(version)
 
 }
 
