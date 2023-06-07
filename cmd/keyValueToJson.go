@@ -33,8 +33,22 @@ var keyValueToJson = &cobra.Command{
 		entries := strings.Split(string(content), "\n")
 		m := make(map[string]string)
 		for _, e := range entries {
+
+			// Skip empty lines, comments and lines without "="
+			if e == "" {
+				continue
+			}
+
+			if strings.HasPrefix(e, "#") || strings.HasPrefix(e, "//") {
+				continue
+			}
+
+			if !strings.Contains(e, "=") {
+				continue
+			}
+
 			parts := strings.Split(e, "=")
-			m[parts[0]] = parts[1]
+			m[strings.TrimSpace(parts[0])] = strings.TrimSpace(parts[1])
 		}
 		jsonString, _ := json.MarshalIndent(m, "", "  ")
 
