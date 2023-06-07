@@ -2,8 +2,7 @@ package docker
 
 // This go file contains the Dockerfile templates for different languages
 
-var golang string = 
-`# base image. Change it to latest version of golang
+var golang string = `# base image. Change it to latest version of golang
 FROM golang:1.14.2-alpine3.11
 # set working directory
 WORKDIR /go/src/app
@@ -18,8 +17,7 @@ RUN go build -o main .
 # running the executable
 CMD ["/go/src/app/main"]`
 
-var node string =
-`# base image. Change it to latest version of node
+var node string = `# base image. Change it to latest version of node
 FROM node:12.16.1-alpine3.9
 # set working directory
 WORKDIR /usr/src/app
@@ -34,9 +32,7 @@ EXPOSE 3000
 # start app
 CMD [ "npm", "start" ]`
 
-
-var python string =
-`# base image. Change it to latest version of python
+var python string = `# base image. Change it to latest version of python
 FROM python:3.8.2-alpine3.11
 # set working directory
 WORKDIR /usr/src/app
@@ -51,8 +47,7 @@ EXPOSE 5000
 # start app
 CMD [ "python", "./app.py" ]`
 
-var ruby string =
-`# base image. Change it to latest version of ruby
+var ruby string = `# base image. Change it to latest version of ruby
 FROM ruby:2.7.1-alpine3.11
 # set working directory
 WORKDIR /usr/src/app
@@ -67,9 +62,7 @@ EXPOSE 3000
 # start app
 CMD [ "ruby", "app.rb" ]`
 
-
-var java string =
-`# base image. Change it to latest version of java
+var java string = `# base image. Change it to latest version of java
 FROM openjdk:8-jdk-alpine
 # set volume point to /tmp
 VOLUME /tmp
