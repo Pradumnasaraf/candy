@@ -46,5 +46,6 @@ func init() {
 	// Flags for the JYT command
 	jsonToYaml.Flags().StringVarP(&outputYamlFile, "output", "o", "", "Output YAML file name (default is output.yaml)")
 	jsonToYaml.Flags().StringVarP(&inputJsonFile, "file", "f", "", "Input the JSON file name")
-	jsonToYaml.MarkFlagRequired("file")
+	err := jsonToYaml.MarkFlagRequired("file")
+	checkNilErr(err)
 }

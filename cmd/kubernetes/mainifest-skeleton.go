@@ -25,8 +25,7 @@ spec:
         ports:
         - containerPort: <Port>`
 
-var service = 
-`apiVersion: v1
+var service = `apiVersion: v1
 kind: Service
 metadata:
   name: myapp
@@ -37,8 +36,7 @@ spec:
   - port: <Port>
     targetPort: <Target Port>`
 
-var ingress =
-`apiVersion: networking.k8s.io/v1
+var ingress = `apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: myingress
@@ -57,8 +55,7 @@ spec:
             port: 
               number: <Port>`
 
-var secret =
-`apiVersion: v1
+var secret = `apiVersion: v1
 kind: Secret
 metadata:
   name: mysecret
@@ -67,16 +64,14 @@ data:
   password: <Password> # This should be base64 encoded
 `
 
-var configmap =
-`apiVersion: v1
+var configmap = `apiVersion: v1
 kind: ConfigMap
 metadata:
   name: myapp
 data:
   key: value`
 
-var pod =
-`apiVersion: v1
+var pod = `apiVersion: v1
 kind: Pod
 metadata:
   name: myapp
@@ -93,8 +88,7 @@ spec:
     ports:
       - containerPort: <Port>`
 
-var pv =
-`apiVersion: v1
+var pv = `apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: mypv
@@ -113,8 +107,7 @@ spec:
     path: /tmp
     server: 172.17.0.2`
 
-var pvc =
-`apiVersion: v1
+var pvc = `apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: mypvc

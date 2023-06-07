@@ -57,7 +57,9 @@ func init() {
 	KubernetesCmd.AddCommand(kubernetesManifestCmd)
 
 	kubernetesManifestCmd.Flags().StringVarP(&k8Obj, "obj", "o", "", "Kubernetes object to generate manifest for.")
-	kubernetesManifestCmd.MarkFlagRequired("obj")
+	err := kubernetesManifestCmd.MarkFlagRequired("obj")
+	checkNilErr(err)
+
 }
 
 func checkNilErr(err error) {

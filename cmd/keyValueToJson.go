@@ -51,7 +51,7 @@ var keyValueToJson = &cobra.Command{
 		// Write the output file
 		file, err := os.Create(outputJsonFile1)
 		checkNilErr(err)
-		
+
 		defer file.Close()
 
 		_, err = file.WriteString(string(jsonString))
@@ -63,7 +63,8 @@ func init() {
 
 	// Flags for the TTJ command
 	keyValueToJson.Flags().StringVarP(&inputTextFile, "file", "f", "", "Input the text file name. Eg: keys.txt or .env")
-	keyValueToJson.MarkFlagRequired("file")
+	err := keyValueToJson.MarkFlagRequired("file")
+	checkNilErr(err)
 
 	keyValueToJson.Flags().StringVarP(&outputJsonFile1, "output", "o", "", "Output JSON file name (default is output.json)")
 	keyValueToJson.Flags().BoolP("print", "p", false, "Print the output to the console")

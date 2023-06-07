@@ -9,6 +9,7 @@ var KubernetesCmd = &cobra.Command{
 	Use:   "k8s [command] [flags]",
 	Short: "Kubernetes related commands. Like generating manifest files for kubernetes objects.",
 	Run: func(cmd *cobra.Command, args []string) {
-		cmd.Help()
+		err := cmd.Help()
+		checkNilErr(err)
 	},
 }
