@@ -5,13 +5,14 @@ on:
       - main
 
 jobs:
-  create-tag: 
+  create-tag:
+    name: Creating tag
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v3
 
-      - name: conventional Changelog Action
+      - name: Creating Changelog and Release
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3
         with:
@@ -23,6 +24,7 @@ jobs:
       tag: ${{ steps.changelog.outputs.tag }}
 
   goreleasers:
+    name: GoReleaser
     runs-on: ubuntu-latest
     needs: create-tag
     # only run if the tag is not empty
