@@ -45,5 +45,8 @@ func init() {
 	// Flags for the YTJ command
 	yamlToJsonCmd.Flags().StringVarP(&outputJsonFile, "output", "o", "", "Output JSON file name (default is output.json)")
 	yamlToJsonCmd.Flags().StringVarP(&inputYamlFile, "file", "f", "", "Input the YAML file name")
-	yamlToJsonCmd.MarkFlagRequired("file")
+
+	err := yamlToJsonCmd.MarkFlagRequired("file")
+	checkNilErr(err)
+
 }

@@ -9,6 +9,7 @@ var DockerCmd = &cobra.Command{
 	Use:   "docker [command] [flags]",
 	Short: "Docker related commands. Like generating a Dockerfile for a language.",
 	Run: func(cmd *cobra.Command, args []string) {
-		cmd.Help()
+		err := cmd.Help()
+		checkNilErr(err)
 	},
 }
