@@ -13,6 +13,8 @@ var (
 
 const (
 	CLI_VERSION = "1.5.0"
+	OWNER       = "Pradumnasaraf"
+	REPO        = "candy"
 )
 
 // versionCmd represents the version command
@@ -33,8 +35,8 @@ var versionCmd = &cobra.Command{
 func checkForNewVersion() {
 
 	githubTag := &latest.GithubTag{
-		Owner:             "Pradumnasaraf",
-		Repository:        "candy",
+		Owner:             OWNER,
+		Repository:        REPO,
 		FixVersionStrFunc: latest.DeleteFrontV(),
 	}
 
@@ -57,5 +59,4 @@ func checkForNewVersion() {
 func init() {
 	// Flags for the version command
 	versionCmd.Flags().BoolVarP(&checkLatest, "latest", "l", false, "Check if the latest version is installed")
-
 }
