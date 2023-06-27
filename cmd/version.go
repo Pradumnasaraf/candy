@@ -12,7 +12,7 @@ var (
 )
 
 const (
-	CLI_VERSION = "1.4.0"
+	CLI_VERSION = "1.5.0"
 )
 
 // versionCmd represents the version command
