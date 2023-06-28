@@ -48,8 +48,6 @@ func createDockerfile(lang string) {
 }
 
 func init() {
-	DockerCmd.AddCommand(dockerfileCmd)
-
 	dockerfileCmd.Flags().StringVarP(&language, "lang", "l", "", "Programming language to generate Dockerfile for.")
 	err := dockerfileCmd.MarkFlagRequired("lang")
 	checkNilErr(err)

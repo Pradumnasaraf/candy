@@ -32,7 +32,6 @@ func init() {
 	// Subcommands for the root command
 	rootCmd.AddCommand(encodeCmd)
 	rootCmd.AddCommand(jsonToYaml)
-	rootCmd.AddCommand(versionCmd)
 	rootCmd.AddCommand(yamlToJsonCmd)
 	rootCmd.AddCommand(keyValueToJson)
 	rootCmd.AddCommand(docker.DockerCmd)
