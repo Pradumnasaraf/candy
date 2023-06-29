@@ -14,7 +14,7 @@ import (
 // deleteallcontainerCmd represents the deleteallcontainer command
 var stopAllContainersCmd = &cobra.Command{
 	Use:   "stopall",
-	Short: "A brief description of your command",
+	Short: "Stop all running containers",
 
 	Run: func(cmd *cobra.Command, args []string) {
 		stopAllContainers()
@@ -40,7 +40,7 @@ func stopAllContainers() {
 	}
 
 	for _, container := range containers {
-		fmt.Print("Stopping container ", container.ID[:10], "... ")
+		fmt.Printf("Stopping container %s (%s)...\n", container.Names[0][1:], container.ID[:6])
 		noWaitTimeout := 5 // to not wait for the container to exit gracefully
 		if err := cli.ContainerStop(ctx, container.ID, containertypes.StopOptions{Timeout: &noWaitTimeout}); err != nil {
 			log.Fatal(err)

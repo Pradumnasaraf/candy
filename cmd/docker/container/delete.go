@@ -45,12 +45,12 @@ func deleteContainer() {
 	if deleteAll {
 
 		for _, container := range containerList {
-			fmt.Printf("Deleting container %s (%s)\n", container.Names[0][1:], container.ID[:6])
+			fmt.Printf("Deleting container %s (%s)...\n", container.Names[0][1:], container.ID[:6])
 			err = cli.ContainerRemove(ctx, container.ID, types.ContainerRemoveOptions{Force: true})
 			checkErr(err)
 		}
 
-		fmt.Println("Stopped all containers")
+		fmt.Println("Deleted all containers")
 		return
 
 	}
@@ -83,7 +83,7 @@ func deleteContainer() {
 		err = cli.ContainerRemove(ctx, slpit[0], types.ContainerRemoveOptions{Force: true})
 		checkErr(err)
 
-		fmt.Println("Container removed")
+		fmt.Printf("Container %s deleted successfully\n", slpit[0])
 	} else {
 		fmt.Println("Container not removed")
 		return
