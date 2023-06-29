@@ -39,16 +39,34 @@ var keyValueToJson = &cobra.Command{
 				continue
 			}
 
+			// Skip comments
 			if strings.HasPrefix(e, "#") || strings.HasPrefix(e, "//") {
 				continue
 			}
 
+			// Skip lines without "="
 			if !strings.Contains(e, "=") {
 				continue
 			}
 
+			// Split the line by "="
 			parts := strings.Split(e, "=")
-			m[strings.TrimSpace(parts[0])] = strings.TrimSpace(parts[1])
+
+			var value string
+
+			// If the value contains "=" then join the parts otherwise take the second part
+			if len(parts) > 2 {
+				value = strings.Join(parts[1:], "=")
+			} else {
+				value = parts[1]
+			}
+
+			// Remove " and ' from the value string
+			value = strings.Trim(value, "\"")
+			value = strings.Trim(value, "'")
+
+			// Add the key-value pair to the map
+			m[strings.TrimSpace(parts[0])] = strings.TrimSpace(value)
 		}
 		jsonString, _ := json.MarshalIndent(m, "", "  ")
 
