@@ -73,6 +73,7 @@ func stopContainers() {
 	}
 
 	// Prompt the user to select a container
+	fmt.Println("CONTAINER NAME - CONTAINER ID")
 	prompt := promptui.Select{
 		Label: "Select a container to stop",
 		Items: runnnigContainer,
@@ -84,7 +85,7 @@ func stopContainers() {
 	}
 
 	prompt = promptui.Select{
-		Label: "Are you sure you want to stop + " + result + "?",
+		Label: "Are you sure you want to stop " + result + "?",
 		Items: []string{"Yes", "No"},
 	}
 
@@ -103,7 +104,7 @@ func stopContainers() {
 			log.Fatal(err)
 		}
 
-		fmt.Println("Stopped container " + split[0])
+		fmt.Println("Container + " + split[0] + " stopped successfully")
 
 	}
 

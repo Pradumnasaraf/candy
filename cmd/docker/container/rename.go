@@ -34,6 +34,7 @@ func renameContainer() {
 	}
 
 	// Prompt the user to select a container
+	fmt.Println("CONTAINER NAME - CONTAINER ID")
 	prompt := promptui.Select{
 		Label: "Select a container to rename",
 		Items: runnnigContainer,
