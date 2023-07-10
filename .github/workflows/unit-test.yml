@@ -18,4 +18,4 @@ jobs:
         with:
           go-version: 1.19
       - name: Run Tests
-        run: go test -v ./.cmd
+        run: go test -v ./cmd
