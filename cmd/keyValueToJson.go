@@ -15,7 +15,7 @@ var (
 )
 
 // textToJsonCmd represents the aa command
-var keyValueToJson = &cobra.Command{
+var keyValueToJsonCmd = &cobra.Command{
 	Use:   "KVTJ [flags]",
 	Short: "Converts Key-Value (text) to JSON.",
 	Run: func(cmd *cobra.Command, args []string) {
@@ -94,10 +94,10 @@ var keyValueToJson = &cobra.Command{
 func init() {
 
 	// Flags for the TTJ command
-	keyValueToJson.Flags().StringVarP(&inputTextFile, "file", "f", "", "Input the text file name. Eg: keys.txt or .env")
-	err := keyValueToJson.MarkFlagRequired("file")
+	keyValueToJsonCmd.Flags().StringVarP(&inputTextFile, "file", "f", "", "Input the text file name. Eg: keys.txt or .env")
+	err := keyValueToJsonCmd.MarkFlagRequired("file")
 	checkNilErr(err)
 
-	keyValueToJson.Flags().StringVarP(&outputJsonFile1, "output", "o", "", "Output JSON file name (default is output.json)")
-	keyValueToJson.Flags().BoolP("print", "p", false, "Print the output to the console")
+	keyValueToJsonCmd.Flags().StringVarP(&outputJsonFile1, "output", "o", "", "Output JSON file name (default is output.json)")
+	keyValueToJsonCmd.Flags().BoolP("print", "p", false, "Print the output to the console")
 }
