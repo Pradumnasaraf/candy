@@ -12,7 +12,7 @@ var (
 )
 
 const (
-	CLI_VERSION = "1.5.0"
+	CLI_VERSION = "1.5.2"
 	OWNER       = "Pradumnasaraf"
 	REPO        = "candy"
 )

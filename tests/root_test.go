@@ -1,7 +1,6 @@
 package test
 
 import (
-	"fmt"
 	"os/exec"
 	"testing"
 )
@@ -19,8 +18,6 @@ func TestRootCmd(t *testing.T) {
 
 	got := string(output)[:47]
 	if got != expectedOutput {
-		fmt.Println(got)
-		fmt.Println(expectedOutput)
 		t.Errorf("expected %v, but got: %v", expectedOutput, got)
 	}
 
