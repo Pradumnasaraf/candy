@@ -1,4 +1,4 @@
-package test
+package docker
 
 import (
 	"os/exec"
@@ -6,18 +6,20 @@ import (
 	"testing"
 )
 
-func TestRootCmd(t *testing.T) {
+func TestKubernetesCmd(t *testing.T) {
 
-	expectedOutput := "Do all your tedious tasks with a single command"
+	expectedOutput := "Kubernetes related commands."
 
-	cmd := exec.Command("candy")
+	cmd := exec.Command("candy", "k8s")
 
+	// Capture the output
 	output, err := cmd.CombinedOutput()
 	if err != nil {
 		t.Errorf("expected no error, but got: %v", err)
 	}
 
-	got := strings.TrimSpace(string(output)[:47])
+	// Validate the cli output
+	got := strings.TrimSpace(string(output)[:28])
 	if got != expectedOutput {
 		t.Errorf("expected %v, but got: %v", expectedOutput, got)
 	}

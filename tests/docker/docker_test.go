@@ -1,0 +1,28 @@
+package docker
+
+import (
+	"os/exec"
+	"strings"
+	"testing"
+)
+
+func TestDockerCmd(t *testing.T) {
+
+	expectedOutput := "Docker related commands."
+
+	// it should convert a key-value file to json
+	cmd := exec.Command("candy", "docker")
+
+	// Capture the output
+	output, err := cmd.CombinedOutput()
+	if err != nil {
+		t.Errorf("expected no error, but got: %v", err)
+	}
+
+	// Validate the cli output
+	got := strings.TrimSpace(string(output)[:24])
+	if got != expectedOutput {
+		t.Errorf("expected %v, but got: %v", expectedOutput, got)
+	}
+
+}
