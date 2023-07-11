@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"os"
 	"strings"
@@ -88,6 +89,8 @@ var keyValueToJsonCmd = &cobra.Command{
 
 		_, err = file.WriteString(string(jsonString))
 		checkNilErr(err)
+
+		fmt.Println("Operation completed successfully. Check the", outputJsonFile1, "file.")
 	},
 }
 
