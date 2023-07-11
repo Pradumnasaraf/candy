@@ -19,10 +19,8 @@ jobs:
         with:
           go-version: 1.19
 
-      - name: Install Executable
-        run: | 
-          go env GOPATH
-          go install 
+      - name: Install Executable to $GOPATH/bin
+        run: go install 
 
       - name: Run Tests
-        run: go test -v ./cmd
+        run: go test -v ./tests
