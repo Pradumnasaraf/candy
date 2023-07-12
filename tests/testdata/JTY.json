@@ -1,0 +1,12 @@
+{
+  "name": "JSON TO KEY TEST",
+  "version": "1.0.0",
+  "tag": [
+    "json",
+    "key"
+  ],
+  "properties": {
+    "name": "test",
+    "type": "string"
+  }
+}
