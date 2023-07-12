@@ -6,6 +6,7 @@ import (
 	"testing"
 )
 
+// TestVersionCmd tests the version command
 func TestVersionCmd(t *testing.T) {
 
 	expectedOutputString := "1."

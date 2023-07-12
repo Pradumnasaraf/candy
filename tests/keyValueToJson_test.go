@@ -6,6 +6,7 @@ import (
 	"testing"
 )
 
+// TestKeyValueToJson tests the keyValueToJson command
 func TestKeyValueToJson(t *testing.T) {
 
 	// it should convert a key-value file to json

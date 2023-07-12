@@ -6,9 +6,8 @@ import (
 	"testing"
 )
 
+// TestJsonToYamlCmd tests the jsonToYaml command
 func TestJsonToYamlCmd(t *testing.T) {
-
-	// it should convert a json file to yaml
 
 	// Execute the jsonToYaml command
 	cmd := exec.Command("candy", "JTY", "-f", "testdata/JTY.json")

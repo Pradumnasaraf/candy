@@ -6,6 +6,7 @@ import (
 	"testing"
 )
 
+// TestDockerCmd tests the docker command
 func TestKubernetesCmd(t *testing.T) {
 
 	expectedOutput := "Kubernetes related commands."
