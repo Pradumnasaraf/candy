@@ -3,7 +3,6 @@ package cmd
 import (
 	"encoding/json"
 	"fmt"
-	"log"
 	"os"
 	"strings"
 
@@ -13,6 +12,7 @@ import (
 var (
 	inputTextFile   string
 	outputJsonFile1 string
+	printOutput     bool
 )
 
 // textToJsonCmd represents the aa command
@@ -72,8 +72,8 @@ var keyValueToJsonCmd = &cobra.Command{
 		jsonString, _ := json.MarshalIndent(m, "", "  ")
 
 		// Print the output to the console
-		if printOutput, _ := cmd.Flags().GetBool("print"); printOutput {
-			log.Println(string(jsonString))
+		if printOutput {
+			fmt.Println(string(jsonString))
 			return
 		}
 
@@ -102,5 +102,5 @@ func init() {
 	checkNilErr(err)
 
 	keyValueToJsonCmd.Flags().StringVarP(&outputJsonFile1, "output", "o", "", "Output JSON file name (default is output.json)")
-	keyValueToJsonCmd.Flags().BoolP("print", "p", false, "Print the output to the console")
+	keyValueToJsonCmd.Flags().BoolVarP(&printOutput, "print", "p", false, "Print the output to the console")
 }
