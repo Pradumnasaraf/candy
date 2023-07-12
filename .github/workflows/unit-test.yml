@@ -20,7 +20,7 @@ jobs:
           go-version: 1.19
 
       - name: Install Executable to $GOPATH/bin
-        run: go install 
+        run: go install
 
       - name: Run Tests
-        run: go test -v ./tests
+        run: go test -v ./tests/...
