@@ -45,8 +45,12 @@ candy
 
 # Env files
 
+# Output files (Including test output)
 .env
 dist/
 output.json
 output.yaml
 output.yml
+JTY_output.yaml
+KVTJ_output.json
+YTJ_output.json
