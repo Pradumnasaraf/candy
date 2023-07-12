@@ -1,0 +1,4 @@
+MONGO=mongodb://localhost:27017/test
+MONGO_DBNAME=test
+NODE_ENV=development
+PORT=3000
