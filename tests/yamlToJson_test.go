@@ -11,7 +11,7 @@ func TestYamlToJsonCmd(t *testing.T) {
 	// it should convert a yaml file to json
 
 	// Execute the yamlToJson command
-	cmd := exec.Command("candy", "YTJ", "-f", "testdata/test.yaml")
+	cmd := exec.Command("candy", "YTJ", "-f", "testdata/YTJ.yaml")
 
 	// Capture the output
 	output, err := cmd.CombinedOutput()
@@ -27,7 +27,7 @@ func TestYamlToJsonCmd(t *testing.T) {
 	}
 
 	// Validate the output file with a new
-	cmd1 := exec.Command("diff", "testdata/test.json", "output.json")
+	cmd1 := exec.Command("diff", "testdata/YTJ_output.json", "output.json")
 	output, err = cmd1.CombinedOutput()
 	if err != nil {
 		t.Errorf("Error comparing output.json and testdata/test.json")

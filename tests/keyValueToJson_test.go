@@ -9,7 +9,7 @@ import (
 func TestKeyValueToJson(t *testing.T) {
 
 	// it should convert a key-value file to json
-	cmd := exec.Command("candy", "KVTJ", "-f", "testdata/env_test")
+	cmd := exec.Command("candy", "KVTJ", "-f", "testdata/env")
 
 	// Capture the output
 	output, err := cmd.CombinedOutput()
@@ -25,7 +25,7 @@ func TestKeyValueToJson(t *testing.T) {
 	}
 
 	// Validate the output file with a new
-	cmd1 := exec.Command("diff", "testdata/test.json", "output.json")
+	cmd1 := exec.Command("diff", "testdata/env_output.json", "output.json")
 	output, err = cmd1.CombinedOutput()
 	if err != nil {
 		t.Errorf("Error comparing output.json and testdata/test.json")

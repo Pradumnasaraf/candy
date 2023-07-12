@@ -1,0 +1,8 @@
+name: JSON TO KEY TEST
+properties:
+    name: test
+    type: string
+tag:
+    - json
+    - key
+version: 1.0.0
