@@ -14,7 +14,7 @@ var (
 	deleteAll bool
 )
 
-// dc is the command for deleting a container
+// deleteContainerCmd represents the delete command
 var deleteContainerCmd = &cobra.Command{
 	Use:   "delete",
 	Short: "Delete a running container",
