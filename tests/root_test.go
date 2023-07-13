@@ -26,7 +26,7 @@ func TestRootCmd(t *testing.T) {
 
 }
 
-// TestRootCmdHelpFlag tests the root command (candy) with help flag 
+// TestRootCmdHelpFlag tests the root command (candy) with help flag
 func TestRootCmdHelpFlag(t *testing.T) {
 
 	expectedOutput := "Do all your tedious tasks with a single command"
