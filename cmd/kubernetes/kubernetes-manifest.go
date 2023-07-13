@@ -54,8 +54,6 @@ func createManifestFile(filename string, obj string) {
 }
 
 func init() {
-	KubernetesCmd.AddCommand(kubernetesManifestCmd)
-
 	kubernetesManifestCmd.Flags().StringVarP(&k8Obj, "obj", "o", "", "Kubernetes object to generate manifest for.")
 	err := kubernetesManifestCmd.MarkFlagRequired("obj")
 	checkNilErr(err)

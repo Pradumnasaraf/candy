@@ -1,6 +1,7 @@
 package docker
 
 import (
+	"github.com/Pradumnasaraf/candy/cmd/docker/container"
 	"github.com/spf13/cobra"
 )
 
@@ -12,4 +13,9 @@ var DockerCmd = &cobra.Command{
 		err := cmd.Help()
 		checkNilErr(err)
 	},
+}
+
+func init() {
+	DockerCmd.AddCommand(container.ContainerCmd)
+	DockerCmd.AddCommand(dockerfileCmd)
 }
