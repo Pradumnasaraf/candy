@@ -29,8 +29,8 @@ func TestEncodeCmd(t *testing.T) {
 
 // Test encode command with decode flag
 func TestEncodeCmdWithDecodeFlag(t *testing.T) {
+	
 	stringToDecode := "cGFzc3dvcmQ="
-
 	cmd := exec.Command("candy", "encode", "-d", stringToDecode)
 
 	// Capture the output
