@@ -9,7 +9,6 @@ import (
 // TestJsonToYamlCmd tests the jsonToYaml command
 func TestJsonToYamlCmd(t *testing.T) {
 
-	// Execute the jsonToYaml command
 	cmd := exec.Command("candy", "JTY", "-f", "testdata/JTY.json")
 
 	// Capture the output
@@ -19,15 +18,15 @@ func TestJsonToYamlCmd(t *testing.T) {
 	}
 
 	// Validate the cli output
-	expecredOutput := "Operation completed successfully. Check the output.yaml file."
+	expectedOutput := "Operation completed successfully. Check the output.yaml file."
 	got := strings.TrimSpace(string(output))
-	if got != expecredOutput {
-		t.Errorf("expected %v, but got: %v", expecredOutput, got)
+	if got != expectedOutput {
+		t.Errorf("expected %v, but got: %v", expectedOutput, got)
 	}
 
 	// Validate the output file with a new
-	cmd1 := exec.Command("diff", "testdata/JTY_output.yaml", "output.yaml")
-	output, err = cmd1.CombinedOutput()
+	cmd = exec.Command("diff", "testdata/JTY_output.yaml", "output.yaml")
+	output, err = cmd.CombinedOutput()
 	if err != nil {
 		t.Errorf("Error comparing output.yaml and testdata/test.yaml")
 	}
@@ -38,9 +37,8 @@ func TestJsonToYamlCmd(t *testing.T) {
 }
 
 // TestJsonToYamlCmd tests the jsonToYaml command with output file flag.
-func TestJsonToYamlCmdWithOutfile(t *testing.T) {
+func TestJsonToYamlCmdWithOutputFlag(t *testing.T) {
 
-	// Execute the jsonToYaml command
 	cmd := exec.Command("candy", "JTY", "-f", "testdata/JTY.json", "-o", "JTY_output.yaml")
 
 	// Capture the output
@@ -50,15 +48,15 @@ func TestJsonToYamlCmdWithOutfile(t *testing.T) {
 	}
 
 	// Validate the cli output
-	expecredOutput := "Operation completed successfully. Check the JTY_output.yaml file."
+	expectedOutput := "Operation completed successfully. Check the JTY_output.yaml file."
 	got := strings.TrimSpace(string(output))
-	if got != expecredOutput {
-		t.Errorf("expected %v, but got: %v", expecredOutput, got)
+	if got != expectedOutput {
+		t.Errorf("expected %v, but got: %v", expectedOutput, got)
 	}
 
 	// Validate the output file with a new
-	cmd1 := exec.Command("diff", "testdata/JTY_output.yaml", "JTY_output.yaml")
-	output, err = cmd1.CombinedOutput()
+	cmd = exec.Command("diff", "testdata/JTY_output.yaml", "JTY_output.yaml")
+	output, err = cmd.CombinedOutput()
 	if err != nil {
 		t.Errorf("Error comparing JTY_output.yaml and testdata/test.yaml")
 	}

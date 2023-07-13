@@ -9,9 +9,8 @@ import (
 
 // Test encode command
 func TestEncodeCmd(t *testing.T) {
+	
 	stringToEncode := "password"
-
-	// Execute the encode command
 	cmd := exec.Command("candy", "encode", stringToEncode)
 
 	// Capture the output
@@ -29,10 +28,9 @@ func TestEncodeCmd(t *testing.T) {
 }
 
 // Test encode command with decode flag
-func TestEncodeCmdWithDecode(t *testing.T) {
+func TestEncodeCmdWithDecodeFlag(t *testing.T) {
 	stringToDecode := "cGFzc3dvcmQ="
 
-	// Execute the encode command
 	cmd := exec.Command("candy", "encode", "-d", stringToDecode)
 
 	// Capture the output
