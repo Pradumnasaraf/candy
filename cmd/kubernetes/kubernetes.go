@@ -13,7 +13,3 @@ var KubernetesCmd = &cobra.Command{
 		checkNilErr(err)
 	},
 }
-
-func init() {
-	KubernetesCmd.AddCommand(kubernetesManifestCmd)
-}
