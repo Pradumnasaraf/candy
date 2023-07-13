@@ -10,7 +10,6 @@ import (
 func TestRootCmd(t *testing.T) {
 
 	expectedOutput := "Do all your tedious tasks with a single command"
-
 	cmd := exec.Command("candy")
 
 	// Capture the output

@@ -9,7 +9,7 @@ import (
 
 // Test encode command
 func TestEncodeCmd(t *testing.T) {
-	
+
 	stringToEncode := "password"
 	cmd := exec.Command("candy", "encode", stringToEncode)
 
