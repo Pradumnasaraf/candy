@@ -6,11 +6,10 @@ import (
 	"testing"
 )
 
+// TestDockerCmd tests the docker command
 func TestDockerCmd(t *testing.T) {
 
 	expectedOutput := "Docker related commands."
-
-	// it should convert a key-value file to json
 	cmd := exec.Command("candy", "docker")
 
 	// Capture the output
