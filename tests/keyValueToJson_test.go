@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-// TestKeyValueToJson tests the keyValueToJson command
+// TestKeyValueToJson tests the KVTJ command
 func TestKeyValueToJson(t *testing.T) {
 
 	cmd := exec.Command("candy", "KVTJ", "-f", "testdata/env")
@@ -36,7 +36,7 @@ func TestKeyValueToJson(t *testing.T) {
 
 }
 
-// TestKeyValueToJson tests the keyValueToJson command with print flag
+// TestKeyValueToJson tests the KVTJ command with print flag.
 func TestKeyValueToJsonWithPrint(t *testing.T) {
 
 	expectedOutput := `{
@@ -62,7 +62,7 @@ func TestKeyValueToJsonWithPrint(t *testing.T) {
 
 }
 
-// TestKeyValueToJson tests the keyValueToJson command with output file flag.
+// TestKeyValueToJson tests the KVTJ command with output flag.
 func TestKeyValueToJsonWithOutputFlag(t *testing.T) {
 
 	cmd := exec.Command("candy", "KVTJ", "-f", "testdata/env", "-o", "KVTJ_output.json")

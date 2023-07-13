@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-// TestRootCmd tests the root command
+// TestRootCmd tests the root command (candy)
 func TestRootCmd(t *testing.T) {
 
 	expectedOutput := "Do all your tedious tasks with a single command"
@@ -27,8 +27,8 @@ func TestRootCmd(t *testing.T) {
 
 }
 
-// TestRootCmdHelp tests the help flag for the root command
-func TestRootCmdHelp(t *testing.T) {
+// TestRootCmdHelpFlag tests the root command (candy) with help flag 
+func TestRootCmdHelpFlag(t *testing.T) {
 
 	expectedOutput := "Do all your tedious tasks with a single command"
 	cmd := exec.Command("candy", "--help")

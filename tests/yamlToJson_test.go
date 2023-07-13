@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-// TestYamlToJsonCmd tests the yamlToJson command
+// TestYamlToJsonCmd tests the YTJ command
 func TestYamlToJsonCmd(t *testing.T) {
 
 	// Execute the yamlToJson command
@@ -37,7 +37,7 @@ func TestYamlToJsonCmd(t *testing.T) {
 
 }
 
-// TestYamlToJsonCmd tests the yamlToJson command with output file flag.
+// TestYamlToJsonCmdWithOutputFlag tests the YTJ command with the output flag
 func TestYamlToJsonCmdWithOutputFlag(t *testing.T) {
 
 	// Execute the yamlToJson command

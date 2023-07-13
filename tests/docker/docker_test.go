@@ -6,6 +6,7 @@ import (
 	"testing"
 )
 
+// TestDockerCmd tests the docker command
 func TestDockerCmd(t *testing.T) {
 
 	expectedOutput := "Docker related commands."

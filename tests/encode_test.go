@@ -21,7 +21,7 @@ func TestEncodeCmd(t *testing.T) {
 
 	// Validate the output
 	expectedOutput := base64.StdEncoding.EncodeToString([]byte(stringToEncode))
-	got := strings.TrimSpace(string(output)) // Convert output to string and remove leading/trailing spaces
+	got := strings.TrimSpace(string(output))
 	if got != expectedOutput {
 		t.Errorf("expected %v, but got: %v", expectedOutput, got)
 	}
@@ -29,7 +29,7 @@ func TestEncodeCmd(t *testing.T) {
 
 // Test encode command with decode flag
 func TestEncodeCmdWithDecodeFlag(t *testing.T) {
-	
+
 	stringToDecode := "cGFzc3dvcmQ="
 	cmd := exec.Command("candy", "encode", "-d", stringToDecode)
 

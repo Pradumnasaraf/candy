@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-// TestJsonToYamlCmd tests the jsonToYaml command
+// TestJsonToYamlCmd tests the JTY command
 func TestJsonToYamlCmd(t *testing.T) {
 
 	cmd := exec.Command("candy", "JTY", "-f", "testdata/JTY.json")
@@ -36,7 +36,7 @@ func TestJsonToYamlCmd(t *testing.T) {
 
 }
 
-// TestJsonToYamlCmd tests the jsonToYaml command with output file flag.
+// TestJsonToYamlCmdWithOutputFlag tests the JTY command with the output flag
 func TestJsonToYamlCmdWithOutputFlag(t *testing.T) {
 
 	cmd := exec.Command("candy", "JTY", "-f", "testdata/JTY.json", "-o", "JTY_output.yaml")
