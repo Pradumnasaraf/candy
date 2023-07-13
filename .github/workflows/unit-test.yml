@@ -1,10 +1,10 @@
 name: Unit Tests
 
 on:
+  workflow_dispatch:
   push:
     branches: ["main"]
   pull_request:
-    branches: ["main"]
 
 jobs:
   build-format:
@@ -18,6 +18,9 @@ jobs:
         uses: actions/setup-go@v4
         with:
           go-version: 1.19
+
+      - name: Clear the test cache
+        run: go clean -testcache
 
       - name: Install Executable to $GOPATH/bin
         run: go install
