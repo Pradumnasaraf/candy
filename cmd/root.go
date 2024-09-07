@@ -13,6 +13,7 @@ import (
 var rootCmd = &cobra.Command{
 	Use:   "candy [command]",
 	Short: "Do all your tedious tasks with a single command",
+	
 	Run: func(cmd *cobra.Command, args []string) {
 		err := cmd.Help()
 		checkNilErr(err)
