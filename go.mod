@@ -1,13 +1,12 @@
 module github.com/Pradumnasaraf/candy
 
-go 1.20
+go 1.22
 
 require (
 	github.com/docker/docker v24.0.2+incompatible
 	github.com/manifoldco/promptui v0.9.0
 	github.com/spf13/cobra v1.6.1
 	github.com/spf13/viper v1.15.0
-	github.com/tcnksm/go-latest v0.0.0-20170313132115-e3007ae9052e
 )
 
 require (
@@ -18,9 +17,6 @@ require (
 	github.com/docker/go-units v0.5.0 // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
-	github.com/google/go-github v17.0.0+incompatible // indirect
-	github.com/google/go-querystring v1.1.0 // indirect
-	github.com/hashicorp/go-version v1.6.0 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/inconshreveable/mousetrap v1.0.1 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
