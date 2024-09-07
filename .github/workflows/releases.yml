@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Creating Changelog and Release
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v3
+        uses: TriPSs/conventional-changelog-action@v5
         with:
           github-token: ${{ secrets.PA_TOKEN }}
           output-file: "false"
@@ -32,12 +32,12 @@ jobs:
     steps:
 
       - name: Checkout the repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Set up Go
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@v5
 
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v4

@@ -44,7 +44,10 @@ Available Commands:
   YTJ         Converts a YAML into JSON.
   docker      Docker related commands. Like generating a Dockerfile for a language.
   encode      It encodes and decodes a string to base64 and vice versa.
+  help        Help about any command
   k8s         Kubernetes related commands. Like generating manifest files for kubernetes objects.
+  update      Update candy to the latest version
+  version     Know the installed version of candy
 ```
 
 For detailed usage of each command, visit [here](https://pradumnasaraf.github.io/candy/)

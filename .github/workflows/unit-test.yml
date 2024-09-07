@@ -12,12 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Go
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@v5
         with:
-          go-version: 1.19
+          go-version: 1.22
+
+      - name: Build Executable
+        run: go build -o ./tests/candy
 
       - name: Clear the test cache
         run: go clean -testcache

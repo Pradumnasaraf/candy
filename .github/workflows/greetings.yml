@@ -15,10 +15,11 @@ on:
 
 jobs:
   welcome:
+    if: github.actor != 'Pradumnasaraf'
     name: Welcome Step
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       - uses: EddieHubCommunity/gh-action-community/src/welcome@main
         with:
           github-token: ${{ secrets.github_token }}

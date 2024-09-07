@@ -10,7 +10,7 @@ import (
 func TestKubernetesCmd(t *testing.T) {
 
 	expectedOutput := "Kubernetes related commands."
-	cmd := exec.Command("candy", "k8s")
+	cmd := exec.Command("./../candy", "k8s")
 
 	// Capture the output
 	output, err := cmd.CombinedOutput()
