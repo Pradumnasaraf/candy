@@ -1,16 +1,12 @@
-<!-- If your PR fixes an open issue, use `Closes #101` to link your PR with the issue. #101 stands for the issue number you are fixing -->
-
-## 🛠️ Fixes Issue
-
-<!-- Remove this section if not applicable -->
+### 🛠️ Fixes Issue <!-- Remove this section if not applicable -->
 
 <!-- Example: Closes #31 -->
 
-## 👨‍💻 Changes proposed
+### 👨‍💻 Changes proposed
 
 <!-- List all the proposed changes in your PR -->
 
-## ✔️ Check List (Check all the applicable boxes) <!-- Follow the below conventions to check the box -->
+### ✔️ Check List (Check all the applicable boxes) <!-- Follow the below conventions to check the box -->
 
 <!-- Mark all the applicable boxes. To mark the box as done follow the following conventions -->
 <!--
@@ -21,9 +17,10 @@
 - [ ] My code follows the code style of this project.
 - [ ] This PR does not contain plagiarized content.
 - [ ] The title of my pull request is a short description of the requested changes.
+- [ ] I have updated the documentation accordingly (if required).
+- [ ] Update the version of the `CliVersion` variable in `cmd/version.go` file (if their is a version change).
 
-## 📄 Note to reviewers
+### 📄 Note to reviewers <!-- Add notes to reviewers if applicable -->
 
-<!-- Add notes to reviewers if applicable -->
 
-## 📷 Screenshots
+### 📷 Screenshots <!-- Remove this section if not applicable -->
