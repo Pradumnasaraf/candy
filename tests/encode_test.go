@@ -11,7 +11,7 @@ import (
 func TestEncodeCmd(t *testing.T) {
 
 	stringToEncode := "password"
-	cmd := exec.Command("candy", "encode", stringToEncode)
+	cmd := exec.Command("./candy", "encode", stringToEncode)
 
 	// Capture the output
 	output, err := cmd.CombinedOutput()

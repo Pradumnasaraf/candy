@@ -9,7 +9,7 @@ import (
 // TestKeyValueToJson tests the KVTJ command
 func TestKeyValueToJson(t *testing.T) {
 
-	cmd := exec.Command("candy", "KVTJ", "-f", "testdata/env")
+	cmd := exec.Command("./candy", "KVTJ", "-f", "testdata/env")
 
 	// Capture the output
 	output, err := cmd.CombinedOutput()

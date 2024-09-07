@@ -10,7 +10,7 @@ import (
 func TestDockerCmd(t *testing.T) {
 
 	expectedOutput := "Docker related commands."
-	cmd := exec.Command("candy", "docker")
+	cmd := exec.Command("./../candy", "docker")
 
 	// Capture the output
 	output, err := cmd.CombinedOutput()

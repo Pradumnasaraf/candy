@@ -9,7 +9,7 @@ import (
 // TestJsonToYamlCmd tests the JTY command
 func TestJsonToYamlCmd(t *testing.T) {
 
-	cmd := exec.Command("candy", "JTY", "-f", "testdata/JTY.json")
+	cmd := exec.Command("./candy", "JTY", "-f", "testdata/JTY.json")
 
 	// Capture the output
 	output, err := cmd.CombinedOutput()
