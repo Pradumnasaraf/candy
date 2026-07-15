@@ -5,7 +5,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/docker/docker/api/types"
+	containertypes "github.com/docker/docker/api/types/container"
 	"github.com/manifoldco/promptui"
 	"github.com/spf13/cobra"
 )
@@ -47,7 +47,7 @@ func deleteContainer() {
 
 			for _, container := range containerList {
 				fmt.Printf("Deleting container %s (%s)...\n", container.Names[0][1:], container.ID[:6])
-				err = cli.ContainerRemove(ctx, container.ID, types.ContainerRemoveOptions{Force: true})
+				err = cli.ContainerRemove(ctx, container.ID, containertypes.RemoveOptions{Force: true})
 				checkErr(err)
 			}
 
@@ -85,7 +85,7 @@ func deleteContainer() {
 	if option == "Yes" {
 		slpit := strings.Split(conSelection, " - ")
 
-		err = cli.ContainerRemove(ctx, slpit[1], types.ContainerRemoveOptions{Force: true})
+		err = cli.ContainerRemove(ctx, slpit[1], containertypes.RemoveOptions{Force: true})
 		checkErr(err)
 
 		fmt.Printf("Container %s deleted successfully\n", slpit[0])
