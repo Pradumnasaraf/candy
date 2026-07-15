@@ -19,16 +19,16 @@ var dockerfileCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 
 		language = strings.ToLower(language)
-		switch {
-		case language == "go" || language == "golang":
+		switch language {
+		case "go", "golang":
 			createDockerfile(golang)
-		case language == "python" || language == "py":
+		case "python", "py":
 			createDockerfile(python)
-		case language == "node" || language == "nodejs":
+		case "node", "nodejs":
 			createDockerfile(node)
-		case language == "java":
+		case "java":
 			createDockerfile(java)
-		case language == "ruby":
+		case "ruby":
 			createDockerfile(ruby)
 		default:
 			log.Print("Currently we don't support Dockerfile generation for " + language + ".")
@@ -39,7 +39,7 @@ var dockerfileCmd = &cobra.Command{
 func createDockerfile(lang string) {
 	file, err := os.Create("Dockerfile")
 	checkNilErr(err)
-	defer file.Close()
+	defer func() { _ = file.Close() }()
 
 	_, err = file.WriteString(lang)
 	checkNilErr(err)

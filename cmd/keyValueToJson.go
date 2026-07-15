@@ -85,7 +85,7 @@ var keyValueToJsonCmd = &cobra.Command{
 		file, err := os.Create(outputJsonFile1)
 		checkNilErr(err)
 
-		defer file.Close()
+		defer func() { _ = file.Close() }()
 
 		_, err = file.WriteString(string(jsonString))
 		checkNilErr(err)

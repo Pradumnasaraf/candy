@@ -19,22 +19,22 @@ var kubernetesManifestCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 
 		k8Obj = strings.ToLower(k8Obj)
-		switch {
-		case k8Obj == "deployment":
+		switch k8Obj {
+		case "deployment":
 			createManifestFile("deployment.yaml", deployment)
-		case k8Obj == "pod":
+		case "pod":
 			createManifestFile("pod.yaml", pod)
-		case k8Obj == "service":
+		case "service":
 			createManifestFile("service.yaml", service)
-		case k8Obj == "ingress":
+		case "ingress":
 			createManifestFile("ingress.yaml", ingress)
-		case k8Obj == "secret":
+		case "secret":
 			createManifestFile("secret.yaml", secret)
-		case k8Obj == "configmap":
+		case "configmap":
 			createManifestFile("configmap.yaml", configmap)
-		case k8Obj == "persistentvolume" || k8Obj == "pv":
+		case "persistentvolume", "pv":
 			createManifestFile("persistentvolume.yaml", pv)
-		case k8Obj == "persistentvolumeclaim" || k8Obj == "pvc":
+		case "persistentvolumeclaim", "pvc":
 			createManifestFile("persistentvolumeclaim.yaml", pvc)
 		default:
 			log.Print("Currently we don't support manifest generation for " + k8Obj + ".")
@@ -45,7 +45,7 @@ func createManifestFile(filename string, obj string) {
 	file, err := os.Create(filename)
 	checkNilErr(err)
 
-	defer file.Close()
+	defer func() { _ = file.Close() }()
 
 	_, err = file.WriteString(obj)
 	checkNilErr(err)
