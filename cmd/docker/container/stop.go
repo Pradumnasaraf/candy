@@ -5,8 +5,8 @@ import (
 	"log"
 	"strings"
 
-	containertypes "github.com/docker/docker/api/types/container"
 	"github.com/manifoldco/promptui"
+	"github.com/moby/moby/client"
 	"github.com/spf13/cobra"
 )
 
@@ -51,7 +51,7 @@ func stopContainers() {
 			for _, container := range containerList {
 				fmt.Printf("Stopping container %s (%s)...\n", container.Names[0][1:], container.ID[:6])
 				noWaitTimeout := 5 // to not wait for the container to exit gracefully
-				err := cli.ContainerStop(ctx, container.ID, containertypes.StopOptions{Timeout: &noWaitTimeout})
+				_, err := cli.ContainerStop(ctx, container.ID, client.ContainerStopOptions{Timeout: &noWaitTimeout})
 				if err != nil {
 					log.Fatal(err)
 				}
@@ -99,7 +99,7 @@ func stopContainers() {
 		split := strings.Split(result, " - ")
 
 		noWaitTimeout := 5 // to not wait for the container to exit gracefully
-		err := cli.ContainerStop(ctx, split[1], containertypes.StopOptions{Timeout: &noWaitTimeout})
+		_, err := cli.ContainerStop(ctx, split[1], client.ContainerStopOptions{Timeout: &noWaitTimeout})
 		if err != nil {
 			log.Fatal(err)
 		}

@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	"github.com/manifoldco/promptui"
+	"github.com/moby/moby/client"
 	"github.com/spf13/cobra"
 )
 
@@ -59,7 +60,7 @@ func renameContainer() {
 	slpit := strings.Split(result, " - ")
 
 	// Rename the container
-	err = cli.ContainerRename(ctx, slpit[0], newName)
+	_, err = cli.ContainerRename(ctx, slpit[0], client.ContainerRenameOptions{NewName: newName})
 	checkErr(err)
 
 	fmt.Printf("Container %s renamed to %s\n", slpit[0], newName)
